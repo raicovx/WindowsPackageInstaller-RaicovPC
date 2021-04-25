@@ -45,6 +45,11 @@ if( $? ){
     Write-Output "VS Code installed successfully"
 }
 
+winget install --id=Microsoft.VisualStudio.Enterprise -e -h | Out-Null
+if( $? ){
+    Write-Output "Visual Studio Enterprise installed successfully"
+}
+
 winget install --id=Nvidia.GeForceExperience -e -h | Out-Null
 if( $? ){
     Write-Output "Nvidia Geforce Experience installed successfully"
