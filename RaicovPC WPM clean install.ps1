@@ -1,141 +1,146 @@
 ﻿
-winget install Google.Chrome | Out-Null
+winget install --id=Google.Chrome -e | Out-Null
 if( $? ){
     Write-Output "Google Chrome installed successfully"
 }
 
-winget install Google.DriveFileStream | Out-Null
+winget install --id=Google.DriveFileStream -e | Out-Null
 if( $? ){
     Write-Output "Google Drive for Windows installed successfully"
 }
 
-winget install Microsoft.Office | Out-Null
+winget install --id=Microsoft.Office -e | Out-Null
 if( $? ){
     Write-Output "Microsoft Office installed successfully"
 }
 
-winget install Microsoft.Teams | Out-Null
+winget install --id=Microsoft.Teams -e | Out-Null
 if( $? ){
     Write-Output "Microsoft Teams installed successfully"
 }
 
-winget install Microsoft.PowerToys | Out-Null
+winget install --id=Microsoft.PowerToys -e | Out-Null
 if( $? ){
     Write-Output "Powertoys installed successfully"
 }
 
-winget install Microsoft.WindowsTerminal | Out-Null 
+winget install --id=Microsoft.WindowsTerminal -e | Out-Null 
 if( $? ){
     Write-Output "Windows Terminal installed successfully"
 }
 
-winget install 7zip.7zip | Out-Null
+winget install --id=7zip.7zip -e | Out-Null
 if( $? ){
     Write-Output "7Zip installed successfully"
 }
 
-winget install VideoLAN.VLC | Out-Null
+winget install --id=VideoLAN.VLC -e | Out-Null
 if( $? ){
     Write-Output "VLC installed successfully"
 }
 
 
-winget install Microsoft.VisualStudioCode.System-x64 | Out-Null
+winget install --id=Microsoft.VisualStudioCode.System-x64 -e | Out-Null
 if( $? ){
     Write-Output "VS Code installed successfully"
 }
 
-winget install Nvidia.GeForceExperience | Out-Null
+winget install --id=Nvidia.GeForceExperience -e | Out-Null
 if( $? ){
     Write-Output "Nvidia Geforce Experience installed successfully"
 }
 
-winget install EpicGames.EpicGamesLauncher | Out-Null
+winget install --id=EpicGames.EpicGamesLauncher -e | Out-Null
 if( $? ){
     Write-Output "Epic Games Launcher installed successfully"
 }
 
-winget install ElectronicArts.EADesktop | Out-Null
+winget install --id=ElectronicArts.EADesktop -e | Out-Null
 if( $? ){
     Write-Output "Origin installed successfully"
 }
 
-winget install Valve.Steam | Out-Null
+winget install --id=Valve.Steam -e | Out-Null
 if( $? ){
     Write-Output "Steam installed successfully"
 }
 
-winget install Blizzard.BattleNet | Out-Null
+winget install --id=Blizzard.BattleNet -e | Out-Null
 if( $? ){
     Write-Output "Battle.net installed successfully"
 }
 
-winget install GOG.Galaxy | Out-Null
+winget install --id=GOG.Galaxy -e | Out-Null
 if( $? ){
     Write-Output "GOG Galaxy installed successfully"
 }
 
-winget install Logitech.LGH | Out-Null
+winget install --id=Logitech.LGH -e | Out-Null
 if( $? ){
     Write-Output "Logitech Gaming Hub installed successfully"
 }
 
-winget install Discord.Discord | Out-Null
+winget install --id=Discord.Discord -e | Out-Null
 if( $? ){
     Write-Output "Discord installed successfully"
 }
 
-winget install plex.Plex | Out-Null
+winget install --id=plex.Plex -e | Out-Null
 if( $? ){
     Write-Output "Plex installed successfully"
 }
 
-winget install NZXT.CAM | Out-Null
+winget install --id=NZXT.CAM -e | Out-Null
 if( $? ){
     Write-Output "NZXT CAM installed successfully"
 }
 
-winget install Surfshark.SurfsharkVPN | Out-Null
+winget install --id=Surfshark.SurfsharkVPN -e | Out-Null
 if( $? ){
     Write-Output "Surfshark installed successfully"
 }
 
-winget install Google.AndroidStudio | Out-Null 
+winget install --id=Google.AndroidStudio -e | Out-Null 
 if( $? ){
     Write-Output "Android Studio installed successfully"
 }
 
-winget install Git.Git | Out-Null
+winget install --id=Git.Git -e | Out-Null
 if( $? ){
     Write-Output "Git installed successfully"
 }
 
-winget install DelugeTeam.Deluge | Out-Null
+winget install --id=DelugeTeam.Deluge -e | Out-Null
 if( $? ){
     Write-Output "Deluge installed successfully"
 }
 
-winget install TimKosse.FilezillaClient | Out-Null
+winget install --id=TimKosse.FilezillaClient -e | Out-Null
 if( $? ){
     Write-Output "Filezilla installed successfully"
 }
 
-winget install PuTTY.PuTTY | Out-Null
+winget install --id=PuTTY.PuTTY -e | Out-Null
 if( $? ){
     Write-Output "Putty installed successfully"
 }
 
-winget install Postman.Postman | Out-Null
+winget install --id=Postman.Postman -e | Out-Null
 if( $? ){
     Write-Output "Postman installed successfully"
 }
 
-winget install ApacheFriends.Xampp | Out-Null
+winget install --id=ApacheFriends.Xampp -e | Out-Null
 if( $? ){
     Write-Output "Xampp installed successfully"
 }
 
-winget install WinSCP.WinSCP | Out-Null
+winget install --id=WinSCP.WinSCP -e | Out-Null
 if( $? ){
     Write-Output "WinSCP installed successfully"
 }
+
+winget install --id=Toinane.Colorpicker -e | Out-Null
+if( $? ){
+    Write-Output "ColorPicker installed successfully"
+} 
