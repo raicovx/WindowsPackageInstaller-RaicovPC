@@ -14,6 +14,12 @@
 
 . .\Functions\OneDrive.ps1
 . .\Functions\WSL.ps1
+. .\Functions\MinorTweaks.ps1
+
+#--------------------------
+# Tweaks
+#--------------------------
+tweakMinorSettings
 
 #--------------------------
 #Install WSL
