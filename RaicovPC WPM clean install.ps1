@@ -1,17 +1,26 @@
 ﻿#Some Discussion about Out-Null / Pipe performance - removed pipes to shave some milliseconds
 #https://stackoverflow.com/questions/5260125/whats-the-better-cleaner-way-to-ignore-output-in-powershell
 
-$DriveLetter = Read-Host -Prompt: 'Enter Destination Drive Letter'
-if ($DriveLetter.Length -gt 1 -or $DriveLetter.Length -eq 0)  {
-    Write-Output "Drive Letter should be a single letter"
-    Break Script
-} 
-$installPath = "$($DriveLetter):\Program Files\"
+#####
+# Drive selection - Probably better to just set default install location via settings as winget -l option isn't a guarantee
+#####
+#$isValid = $false
+#[regex]$Regex = "^[A-Za-z]{1}$"
+#while($isValid -eq $false){
+    #$DriveLetter = Read-Host -Prompt: 'Enter Destination Drive Letter'
+    #if ($Regex.Match($DriveLetter).Success)  {
+        #$installPath = "$($DriveLetter):\Program Files\"
+        #Write-Output = "Install Path is $($installPath)"
+        #$isValid = $true
+    #} else {
+        #Write-Output "Drive Letter should be a single letter"
+    #} 
+#}
 
 #--------------------------
 # Browsers
 #--------------------------
-Out-Null -InputObject (winget install --id=Google.Chrome -e -h)
+Out-Null -InputObject (winget install --id=Google.Chrome -e -h )
 if( $? ){
     Write-Output "Google Chrome installed successfully"
 }
