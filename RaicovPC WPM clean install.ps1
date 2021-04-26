@@ -147,6 +147,11 @@ if( $? ){
     Write-Output "WinSCP installed successfully"
 }
 
+Out-Null -InputObject (winget install --id=OpenJS.NodeJS -e -h)
+if( $? ){
+    Write-Output "Node.JS installed successfully"
+} 
+
 Out-Null -InputObject (winget install --id=Toinane.Colorpicker -e -h)
 if( $? ){
     Write-Output "ColorPicker installed successfully"
