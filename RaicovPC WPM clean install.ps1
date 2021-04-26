@@ -152,6 +152,11 @@ if( $? ){
     Write-Output "Node.JS installed successfully"
 } 
 
+Out-Null -InputObject (winget install --id=BlenderFoundation.Blender -e -h)
+if( $? ){
+    Write-Output "Blender installed successfully"
+} 
+
 Out-Null -InputObject (winget install --id=Toinane.Colorpicker -e -h)
 if( $? ){
     Write-Output "ColorPicker installed successfully"
