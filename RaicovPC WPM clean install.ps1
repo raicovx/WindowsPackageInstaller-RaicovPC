@@ -1,21 +1,14 @@
 ﻿#Some Discussion about Out-Null / Pipe performance - removed pipes to shave some milliseconds
 #https://stackoverflow.com/questions/5260125/whats-the-better-cleaner-way-to-ignore-output-in-powershell
 
-#####
-# Drive selection - Probably better to just set default install location via settings as winget -l option isn't a guarantee
-#####
-#$isValid = $false
-#[regex]$Regex = "^[A-Za-z]{1}$"
-#while($isValid -eq $false){
-    #$DriveLetter = Read-Host -Prompt: 'Enter Destination Drive Letter'
-    #if ($Regex.Match($DriveLetter).Success)  {
-        #$installPath = "$($DriveLetter):\Program Files\"
-        #Write-Output = "Install Path is $($installPath)"
-        #$isValid = $true
-    #} else {
-        #Write-Output "Drive Letter should be a single letter"
-    #} 
-#}
+#Ryzen Master - https://download.amd.com/Desktop/AMD-Ryzen-Master.exe
+#MSI Afterburner - https://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip
+#Samsung Magician - https://www.samsung.com/semiconductor/minisite/ssd/download/tools/
+
+
+
+#Requires -RunAsAdministrator
+
 
 #--------------------------
 # Browsers
@@ -91,6 +84,11 @@ if( $? ){
     Write-Output "Xampp installed successfully"
 }
 
+Out-Null -InputObject (winget install --id Canonical.Ubuntu -e -h)
+if( $? ){
+    Write-Output "Ubuntu installed successfully"
+}
+
 #--------------------------
 # Game Development
 #--------------------------
@@ -120,6 +118,11 @@ if( $? ){
 Out-Null -InputObject (winget install --id ElectronicArts.EADesktop -e -h)
 if( $? ){
     Write-Output "Origin installed successfully"
+}
+
+Out-Null -InputObject (winget install --id Ubisoft.Connect -e -h)
+if( $? ){
+    Write-Output "Ubisoft Connect installed successfully"
 }
 
 Out-Null -InputObject (winget install --id Valve.Steam -e -h)
