@@ -112,6 +112,11 @@ if( $? ){
     Write-Output "Android Studio installed successfully"
 }
 
+Out-Null -InputObject (winget install --id=JetBrains.IntelliJIDEA.Community -e -h)
+if( $? ){
+    Write-Output "IntelliJIDEA Community installed successfully"
+} 
+
 Out-Null -InputObject (winget install --id=Git.Git -e -h)
 if( $? ){
     Write-Output "Git installed successfully"
@@ -160,4 +165,4 @@ if( $? ){
 Out-Null -InputObject (winget install --id=Toinane.Colorpicker -e -h)
 if( $? ){
     Write-Output "ColorPicker installed successfully"
-} 
+}
