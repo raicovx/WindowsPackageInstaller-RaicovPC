@@ -87,6 +87,11 @@ if( $? ){
     Write-Output "Logitech Gaming Hub installed successfully"
 }
 
+Out-Null -InputObject (winget install --id=File-New-Project.EarTrumpet -e -h)
+if( $? ){
+    Write-Output "EarTrumpet installed successfully"
+}
+
 Out-Null -InputObject (winget install --id=Discord.Discord -e -h)
 if( $? ){
     Write-Output "Discord installed successfully"
