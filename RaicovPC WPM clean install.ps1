@@ -94,6 +94,11 @@ if( $? ){
     Write-Output "Blender installed successfully"
 } 
 
+Out-Null -InputObject (winget install --id=UnityTechnologies.UnityHub -e -h)
+if( $? ){
+    Write-Output "Unity Hub installed successfully"
+} 
+
 #--------------------------
 # Gaming
 #--------------------------
