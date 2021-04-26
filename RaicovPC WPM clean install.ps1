@@ -13,6 +13,13 @@
 #Requires -RunAsAdministrator
 
 . .\Functions\OneDrive.ps1
+. .\Functions\WSL.ps1
+
+#--------------------------
+#Install WSL
+#--------------------------
+installWSL
+installWSL2
 
 #--------------------------
 # Browsers

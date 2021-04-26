@@ -1,5 +1,9 @@
 function uninstallOneDrive()
 {
+    #Hide Ad
+    New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name ShowSyncProviderNotifications -PropertyType DWord -Value 0 -Force
+
+    #Uninstall 
     [xml]$Uninstall = Get-Package -Name "Microsoft OneDrive" -ProviderName Programs -ErrorAction Ignore | ForEach-Object -Process {$_.SwidTagText}
     [xml]$Uninstall = $Uninstall.SoftwareIdentity.InnerXml
     [string]$UninstallString = $Uninstall.Meta.UninstallString
