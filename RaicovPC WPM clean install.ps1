@@ -1,6 +1,9 @@
 ﻿#Some Discussion about Out-Null / Pipe performance - removed pipes to shave some milliseconds
 #https://stackoverflow.com/questions/5260125/whats-the-better-cleaner-way-to-ignore-output-in-powershell
 
+#Nice config script
+#https://github.com/farag2/Windows-10-Sophia-Script
+
 #Ryzen Master - https://download.amd.com/Desktop/AMD-Ryzen-Master.exe
 #MSI Afterburner - https://download.msi.com/uti_exe/vga/MSIAfterburnerSetup.zip
 #Samsung Magician - https://www.samsung.com/semiconductor/minisite/ssd/download/tools/
@@ -9,6 +12,7 @@
 
 #Requires -RunAsAdministrator
 
+. .\Functions\OneDrive.ps1
 
 #--------------------------
 # Browsers
@@ -230,3 +234,8 @@ Out-Null -InputObject (winget install --id Toinane.Colorpicker -e -h)
 if( $? ){
     Write-Output "ColorPicker installed successfully"
 }
+
+#--------------------------
+# Clean up scripts
+#--------------------------
+uninstallOneDrive
