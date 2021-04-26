@@ -6,6 +6,11 @@ if( $? ){
     Write-Output "Google Chrome installed successfully"
 }
 
+Out-Null -InputObject (winget install --id=VivaldiTechnologies.Vivaldi -e -h)
+if( $? ){
+    Write-Output "Vivaldi installed successfully"
+}
+
 Out-Null -InputObject (winget install --id=Google.DriveFileStream -e -h)
 if( $? ){
     Write-Output "Google Drive for Windows installed successfully"
@@ -40,7 +45,6 @@ Out-Null -InputObject (winget install --id=VideoLAN.VLC -e -h)
 if( $? ){
     Write-Output "VLC installed successfully"
 }
-
 
 Out-Null -InputObject (winget install --id=Microsoft.VisualStudioCode.System-x64 -e -h)
 if( $? ){
