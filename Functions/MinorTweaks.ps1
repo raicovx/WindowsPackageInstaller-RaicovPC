@@ -3,6 +3,7 @@ function tweakMinorSettings() {
     minimiseDiagnosticData
     showHiddenFiles
     showFileExtensions
+    disableSnapAssist
     hide3dObjectsFolder
     hideWindowsInk
     hideMeetNow
