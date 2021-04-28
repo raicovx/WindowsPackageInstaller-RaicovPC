@@ -1,7 +1,7 @@
 function tweakMinorSettings() {
     disableFeedbackRequests
     minimiseDiagnosticData
-    showHiddenFiles
+    #showHiddenFiles - Not including due to desktop ini 
     showFileExtensions
     disableSnapAssist
     hide3dObjectsFolder
