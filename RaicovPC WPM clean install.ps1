@@ -190,6 +190,11 @@ if( $? ){
     Write-Output "VLC installed successfully"
 }
 
+Out-Null -InputObject (winget install --id OBSProject.OBSStudio -e -h)
+if( $? ){
+    Write-Output "OBS Studio installed successfully"
+}
+
 #--------------------------
 # Utils
 #--------------------------
