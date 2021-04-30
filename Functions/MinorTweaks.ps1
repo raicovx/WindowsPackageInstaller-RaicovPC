@@ -1,8 +1,10 @@
 function tweakMinorSettings() {
     disableFeedbackRequests
     minimiseDiagnosticData
-    showHiddenFiles
+    limitReservableBandwidth
+    #showHiddenFiles - Not including due to desktop ini 
     showFileExtensions
+    disableSnapAssist
     hide3dObjectsFolder
     hideWindowsInk
     hideMeetNow
@@ -23,6 +25,19 @@ function disableFeedbackRequests() {
         New-Item -Path HKCU:\SOFTWARE\Microsoft\Siuf\Rules -Force
     }
     New-ItemProperty -Path HKCU:\SOFTWARE\Microsoft\Siuf\Rules -Name NumberOfSIUFInPeriod -PropertyType DWord -Value 0 -Force
+}
+
+function limitReservableBandwidth {
+    If (-not(Get-InstalledModule PolicyFileEditor -ErrorAction silentlycontinue)) {
+        Install-Module -Name PolicyFileEditor -RequiredVersion 3.0.0
+    }
+    $policyLocation = "$env:windir\system32\GroupPolicy\Machine\registry.pol"
+    $key = "Software\Policies\Microsoft\Windows\Psched"
+    $value = "NonBestEffortLimit"
+    $data = 0
+    $type = 'DWORD'
+
+    Set-PolicyFileEntry -Path $policyLocation -Key $key -Value $value -Data $data -Type $type
 }
 
 #Set the OS level of diagnostic data gathering to minimum
